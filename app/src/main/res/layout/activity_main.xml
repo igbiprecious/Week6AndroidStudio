@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="10dp"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/textLabel"
+        android:layout_width="319dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:text="Add New Contact"
+        android:textAlignment="center"
+        android:textColor="#088A0D"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/contactName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Contact Name"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/textLabel"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/textLabel"
+        app:layout_constraintTop_toBottomOf="@+id/textLabel" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="#209F25"
+        android:text="Save"
+        app:cornerRadius="44dp"
+        app:layout_constraintEnd_toEndOf="@+id/contactPhone"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/contactPhone"
+        app:layout_constraintTop_toBottomOf="@+id/contactPhone" />
+
+
+    <EditText
+        android:id="@+id/contactPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:text=""
+
+        app:layout_constraintEnd_toEndOf="@+id/contactName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/contactName"
+        app:layout_constraintTop_toBottomOf="@+id/contactName" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="319dp"
+        android:layout_height="429dp"
+        android:layout_marginTop="36dp"
+        app:cardBackgroundColor="#CDD5C5"
+
+        app:cardCornerRadius="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSave">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/contactsRv"
+            android:layout_width="match_parent"
+            android:layout_height="340dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="5dp"
+            android:paddingLeft="20dp" />
+
+        <TextView
+            android:id="@+id/contactLists"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20px"
+
+            android:gravity="center"
+            android:text="My Phonebook"
+            android:textAllCaps="true"
+            android:textColor="#ff3b30"
+            android:textSize="24dp" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
